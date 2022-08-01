@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSquareGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
+
 import { IProject } from "../../utils/IProject";
+import { Icon } from "../Icons";
 
 interface ProjectProps {
 	project: IProject;
@@ -23,23 +24,14 @@ export function Project({ project }: ProjectProps) {
 				</TechsContainer>
 				<p>{project.description}</p>
 				<div>
-					<a
-						href={project.githubUrl}
-						target="_blank"
-						title="Open Repository"
-						rel="noreferrer"
-					>
-						<Icon icon={faSquareGithub} />
-					</a>
+					<Icon href={project.githubUrl} title="Open Repository" icon={faGithub} />
+
 					{project?.deployUrl && (
-						<a
+						<Icon
 							href={project.deployUrl}
-							target="_blank"
 							title="Open App Site"
-							rel="noreferrer"
-						>
-							<Icon icon={faSquareArrowUpRight} />
-						</a>
+							icon={faSquareArrowUpRight}
+						/>
 					)}
 				</div>
 			</ContentContainer>
@@ -87,14 +79,6 @@ const ContentContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
-
-	a,
-	a:hover,
-	a:focus,
-	a:active {
-		text-decoration: none;
-		color: inherit;
-	}
 `;
 
 const TechItem = styled.div`
@@ -110,13 +94,4 @@ const TechsContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;
-`;
-
-const Icon = styled(FontAwesomeIcon)`
-	width: 2rem;
-	height: 2rem;
-
-	overflow: hidden;
-	background-color: rgb(29, 30, 42);
-	color: rgb(202, 205, 232);
 `;

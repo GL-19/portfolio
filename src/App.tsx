@@ -1,14 +1,18 @@
 import { Project } from "./components/Project";
 import { projects } from "./utils/projects";
 import styled from "styled-components";
+import { Header } from "./components/Header";
 
 function App() {
 	return (
-		<ProjectsContainer>
-			{projects.map((project, index) => (
-				<Project key={index} project={project} />
-			))}
-		</ProjectsContainer>
+		<>
+			<Header />
+			<ProjectsContainer>
+				{projects.map((project, index) => (
+					<Project key={index} project={project} />
+				))}
+			</ProjectsContainer>
+		</>
 	);
 }
 
