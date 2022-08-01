@@ -8,10 +8,10 @@ interface IconProps {
 	icon: IconDefinition;
 }
 
-export function Icon({ href, title, icon }: IconProps) {
+export function LinkIcon({ href, title, icon }: IconProps) {
 	return (
 		<Link href={href} target="_blank" title={title} rel="noreferrer">
-			<StyledFontAwesomeIcon icon={icon} />
+			<Icon icon={icon} />
 		</Link>
 	);
 }
@@ -26,7 +26,7 @@ const Link = styled.a`
 	}
 `;
 
-const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+export const Icon = styled(FontAwesomeIcon)`
 	width: 2rem;
 	height: 2rem;
 

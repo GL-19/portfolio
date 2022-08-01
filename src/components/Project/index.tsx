@@ -3,7 +3,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
 
 import { IProject } from "../../utils/IProject";
-import { Icon } from "../Icons";
+import { LinkIcon } from "../Icons";
 
 interface ProjectProps {
 	project: IProject;
@@ -24,10 +24,10 @@ export function Project({ project }: ProjectProps) {
 				</TechsContainer>
 				<p>{project.description}</p>
 				<div>
-					<Icon href={project.githubUrl} title="Open Repository" icon={faGithub} />
+					<LinkIcon href={project.githubUrl} title="Open Repository" icon={faGithub} />
 
 					{project?.deployUrl && (
-						<Icon
+						<LinkIcon
 							href={project.deployUrl}
 							title="Open App Site"
 							icon={faSquareArrowUpRight}
