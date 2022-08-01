@@ -16,9 +16,16 @@ export default App;
 
 const ProjectsContainer = styled.main`
 	margin: 0 auto;
-	padding: 2rem;
+	padding: 1.5rem;
 
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
+
+	@media screen and (min-width: 850px) {
+		padding: 3rem;
+		gap: 2rem;
+	}
 `;
