@@ -8,6 +8,7 @@ import socialProofSection from "../images/social-proof-section.png";
 import pingPongComing from "../images/ping-pong-coming.png";
 import fourCard from "../images/four-card.png";
 import faqAccordion from "../images/faq-accordion.png";
+import ipAddressTracker from "../images/ip-address-tracker.png";
 
 export const projects: IProject[] = [
 	{
@@ -35,6 +36,23 @@ export const projects: IProject[] = [
 		technologies: ["NextJS", "Typescript", "SCSS", "Prismic CMS"],
 		githubUrl: "https://github.com/GL-19/blog-ignite",
 		deployUrl: "https://gl-19-blog-ignite.vercel.app/",
+	},
+	{
+		img: blog,
+		title: "Blog",
+		description:
+			"Aplicação desenvolvida para resolução do desafio 5 do bootcamp Ignite - Trilha React. O blog foi criado utilizando-se Typescript, Next.js, SCSS para estilização e o Prismic CMS para armazenamento dos artigos.",
+		technologies: ["NextJS", "Typescript", "SCSS", "Prismic CMS"],
+		githubUrl: "https://github.com/GL-19/ip-address-tracker",
+		deployUrl: "https://ip-address-tracker-gl-19.vercel.app/",
+	},
+	{
+		img: ipAddressTracker,
+		title: "Ip Address Tracker",
+		description: "App desenvolvida",
+		technologies: ["ReactJS", "Typescript", "Styled-components, Leaflet"],
+		githubUrl: "https://github.com/GL-19/Pesquisa-Github",
+		deployUrl: "https://gl-19-ip-address-tracker.vercel.app/",
 	},
 	{
 		img: worldtrip,
