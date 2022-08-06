@@ -31,6 +31,10 @@ export const Icon = styled(FontAwesomeIcon)`
 	height: 2rem;
 
 	overflow: hidden;
-	background-color: rgb(29, 30, 42);
-	color: rgb(202, 205, 232);
+	background-color: var(--very-dark-gray);
+	color: white;
+	&:hover,
+	&:active {
+		color: var(--gold);
+	}
 `;

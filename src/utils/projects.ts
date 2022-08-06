@@ -13,7 +13,7 @@ import ipAddressTracker from "../images/ip-address-tracker.png";
 export const projects: IProject[] = [
 	{
 		img: todoList,
-		title: "Todo App",
+		title: "Todo app with user authentication and drag and drop",
 		description:
 			"A aplicação consiste numa lista de todos, com ordenamento realizado por meio de drag and drop e autenticação de usuário para acesso à lista. Para o desenvolvimento do front-end, utilizou-se Typescript, React e Styled-components, enquanto para o back-end utilizou-se NodeJS, Express, PostgreSQL e Docker. O deploy do back-end foi realizado no Heroku, e o do front-end na Vercel.",
 		technologies: [
@@ -38,18 +38,19 @@ export const projects: IProject[] = [
 		deployUrl: "https://gl-19-blog-ignite.vercel.app/",
 	},
 	{
-		img: blog,
-		title: "Blog",
+		img: ipAddressTracker,
+		title: "Github Search",
 		description:
 			"Aplicação desenvolvida para resolução do desafio 5 do bootcamp Ignite - Trilha React. O blog foi criado utilizando-se Typescript, Next.js, SCSS para estilização e o Prismic CMS para armazenamento dos artigos.",
-		technologies: ["NextJS", "Typescript", "SCSS", "Prismic CMS"],
+		technologies: ["ReactJS", "Typescript", "Styled-components, Leaflet"],
 		githubUrl: "https://github.com/GL-19/ip-address-tracker",
 		deployUrl: "https://ip-address-tracker-gl-19.vercel.app/",
 	},
 	{
 		img: ipAddressTracker,
 		title: "Ip Address Tracker",
-		description: "App desenvolvida",
+		description:
+			"This is a solution to the Ip Address Tracker challenge on Frontend Mentor.",
 		technologies: ["ReactJS", "Typescript", "Styled-components, Leaflet"],
 		githubUrl: "https://github.com/GL-19/Pesquisa-Github",
 		deployUrl: "https://gl-19-ip-address-tracker.vercel.app/",

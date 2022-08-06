@@ -1,6 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+  :root {
+    --dark-blue: #161722;
+    --very-dark-gray: #1D1E2A;
+    --gray: #CACDE8;
+    --white: #F0F0F0;
+    --gold: #FDD710;
+     --cyan: #55d8f4; 
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -9,7 +18,8 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-size: 16px;
-    background: rgb(22, 23, 34);
-    color: rgb(202, 205, 232);
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--dark-blue);
+    color: var(--white);
   }
 `;

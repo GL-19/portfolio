@@ -5,14 +5,14 @@ import { Header } from "./components/Header";
 
 function App() {
 	return (
-		<>
+		<AppContainer>
 			<Header />
 			<ProjectsContainer>
 				{projects.map((project, index) => (
 					<Project key={index} project={project} />
 				))}
 			</ProjectsContainer>
-		</>
+		</AppContainer>
 	);
 }
 
@@ -32,4 +32,11 @@ const ProjectsContainer = styled.main`
 		padding: 3rem;
 		gap: 2rem;
 	}
+`;
+
+const AppContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1.5rem 0.5rem;
 `;

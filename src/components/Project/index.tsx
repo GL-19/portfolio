@@ -15,14 +15,18 @@ export function Project({ project }: ProjectProps) {
 			<ImgContainer>
 				<img src={project.img} alt="project-preview" />
 			</ImgContainer>
+
 			<ContentContainer>
 				<h1>{project.title}</h1>
+
 				<TechsContainer>
 					{project.technologies.map((technology) => (
 						<TechItem>{technology}</TechItem>
 					))}
 				</TechsContainer>
+
 				<p>{project.description}</p>
+
 				<div>
 					<LinkIcon href={project.githubUrl} title="Open Repository" icon={faGithub} />
 
@@ -51,8 +55,9 @@ const ProjectContainer = styled.div`
 	align-items: center;
 	gap: 1rem;
 
-	color: rgb(202, 205, 232);
-	background-color: rgb(29, 30, 42);
+	color: var(--white);
+	background-color: var(--very-dark-gray);
+	filter: brightness(1.33);
 	border-radius: 5px;
 
 	@media screen and (min-width: 850px) {
@@ -79,13 +84,20 @@ const ContentContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
+
+	h1 {
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
 `;
 
 const TechItem = styled.div`
 	background-color: rgb(22, 23, 34);
-	border: 0.125rem solid rgb(202, 205, 232);
+	color: var(--gold);
+	border: 0.125rem solid var(--gold);
 	border-radius: 5px;
-	padding: 0.5rem;
+	padding: 0.33rem;
+	font-size: 0.9rem;
 `;
 
 const TechsContainer = styled.div`
